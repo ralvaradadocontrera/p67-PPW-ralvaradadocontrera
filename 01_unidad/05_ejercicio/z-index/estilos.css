@@ -1,0 +1,22 @@
+.contenido-1 {
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: azure;
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 150px;
+}
+.contenido-2 {
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: antiquewhite;
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    left: 200px;
+}

@@ -1,0 +1,8 @@
+.div-static {
+    display: block;
+    position: relative;
+    border: 1px solid black;
+    top: 20px;
+    left: 20px;
+    background-color: bisque;
+}

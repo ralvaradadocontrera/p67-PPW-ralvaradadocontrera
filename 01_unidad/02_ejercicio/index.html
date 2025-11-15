@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formularios — Ejemplo básico</title>
+        <link rel="stylesheet" href="estilos.css">
     </head>
     <body>
         <header>
@@ -16,19 +17,19 @@
                     <fieldset>
                         <legend>Datos personales</legend>
 
-                        <label for="nombre">Nombres: </label>
+                        <label class="form-label" for="nombre">Nombres: </label>
                         <input type="text" name="nombre" id="nombre" required/>
-                        <br>
-                        <label for="apellido">Apellidos: </label>
+                        
+                        <label class="form-label" for="apellido">Apellidos: </label>
                         <input type="text" name="apellido" id="apellido" required/>
-                        <br>
-                        <label for="correo_electronico">Correo electrónico: </label>
+                        
+                        <label class="form-label" for="correo_electronico">Correo electrónico: </label>
                         <input type="email" name="correo_electronico" id="correo_electronico" required/>
-                        <br>
-                        <label for="telefono">Teléfono: </label>
+                        
+                        <label class="form-label" for="telefono">Teléfono: </label>
                         <input type="tel" pattern="^[0-9\+\-\s]{7,}$" 
                             placeholder="+593 99 999 9999" name="telefono" id="telefono" required/>
-                        <br>
+                        
                         <label for="fecha_nacimiento">Fecha de nacimiento: </label>
                         <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required/>
 
