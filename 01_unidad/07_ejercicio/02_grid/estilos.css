@@ -1,0 +1,16 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 100px auto 50px;
+}
+
+.item {
+    background: lightgreen;
+    padding: 20px;
+    border: 1px solid gray;
+}
