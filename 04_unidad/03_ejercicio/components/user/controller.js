@@ -2,7 +2,7 @@ const storage = require('./storage')
 
 function addUser( data ) {
     return new Promise( (resolve, reject) => {
-        if (!data.user || !data.name || !data.last_name) {
+        if (!data.user || !data.password || !data.name || !data.last_name) {
             reject( 'Ingresar los datos solicitados.' )
         } else {
             resolve( storage.add( data ) )

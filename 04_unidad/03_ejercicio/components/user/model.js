@@ -8,6 +8,7 @@ const req_string = {
 
 const user_schema = new schema({
     user: req_string,
+    password: req_string,
     name: req_string,
     last_name: req_string,
     date_birth: Date,

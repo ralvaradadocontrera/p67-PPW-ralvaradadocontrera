@@ -14,5 +14,7 @@ app.use( body_parser.urlencoded({extended:false}) )
 
 routes( app )
 
+app.use('/', express.static('frontend'))
+
 app.listen( config.PORT )
 console.log(`La aplicacion se encuentra arriba en http://localhost:${config.PORT}`)

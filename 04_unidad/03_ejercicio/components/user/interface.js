@@ -5,7 +5,7 @@ const response = require('../../network/response')
 const routes = express.Router()
 
 routes.get('/', function(req, res){
-    controller.getUser( req.body )
+    controller.getUser( req.query )
         .then( (data) => response.success( req, res, data, 200 ) )
         .catch( (data) => response.error( req, res, data, 500 ) )
 })

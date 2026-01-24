@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Gestión de Usuarios Pro</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="scripts.js"></script>
 </head>
 <body>
 
@@ -26,32 +25,22 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody>
-            <tr id="row-1">
-                <td class="td-user">jdoe88</td>
-                <td class="td-name">John</td>
-                <td class="td-lastname">Doe</td>
-                <td class="td-birth">1988-05-15</td>
-                <td>
-                    <button class="btn btn-edit" onclick="prepareEdit('1')">Editar</button>
-                    <button class="btn btn-delete" onclick="confirmDelete('1')">Eliminar</button>
-                </td>
-            </tr>
+        <tbody id="tableBody">
         </tbody>
     </table>
 </div>
 
 <div id="modalAdd" class="modal">
     <div class="modal-content">
-        <div class="modal-header">Nuevo Usuario</div>
-        <form onsubmit="event.preventDefault(); alert('Guardado correctamente'); closeModal('modalAdd');">
-            <div class="form-group"><label>Usuario</label><input type="text" required></div>
-            <div class="form-group"><label>Clave</label><input type="password" required></div>
-            <div class="form-group"><label>Nombres</label><input type="text" required></div>
-            <div class="form-group"><label>Apellidos</label><input type="text" required></div>
-            <div class="form-group"><label>Fecha de Nacimiento</label><input type="date" required></div>
-            <button type="submit" class="btn btn-save">Registrar</button>
-            <button type="button" class="btn" style="width: 100%; margin-top: 5px;" onclick="closeModal('modalAdd')">Cancelar</button>
+        <h3>Nuevo Usuario</h3>
+        <form id="formAdd">
+            <div class="form-group"><label>Usuario</label><input type="text" name="user" required></div>
+            <div class="form-group"><label>Clave</label><input type="password" name="password" required></div>
+            <div class="form-group"><label>Nombres</label><input type="text" name="name" required></div>
+            <div class="form-group"><label>Apellidos</label><input type="text" name="last_name" required></div>
+            <div class="form-group"><label>Fecha de Nacimiento</label><input type="date" name="date_birth" required></div>
+            <button type="submit" class="btn btn-save">Guardar Registro</button>
+            <button type="button" class="btn" onclick="closeModal('modalAdd')" style="width:100%; margin-top:5px;">Cancelar</button>
         </form>
     </div>
 </div>
@@ -86,5 +75,6 @@
     </div>
 </div>
 
+    <script src="scripts.js"></script>
 </body>
 </html>
