@@ -32,12 +32,12 @@ loginForm?.addEventListener('submit', e => {
     } )
 })
 
-loginForm?.addEventListener('submit', e => {
+registerForm?.addEventListener('submit', e => {
   e.preventDefault()
-  const username = $('#login-username').value
-  const password = $('#login-password').value
+  const username = $('#register-username').value
+  const password = $('#register-password').value
     
-  fetch('/login', {
+  fetch('/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -46,14 +46,12 @@ loginForm?.addEventListener('submit', e => {
   })
     .then( res => {
         if (res.ok) {
-            loginSpan.innerText = 'Sesión iniciada... Entrando... '
-            loginSpan.style.color = 'green'
-            setTimeout(() => {
-                window.location.href = '/protected'
-            }, 2000)
+            registerSpan.innerText = 'Sesión iniciada... Entrando... '
+            registerSpan.style.color = 'green'
+            window.location.href = '/'
         } else {
-            loginSpan.innerText = 'Error al iniciar sesión.'
-            loginSpan.style.color = 'red'
+            registerSpan.innerText = 'Error al registrar usuario.'
+            registerSpan.style.color = 'red'
         }
     } )
 })

@@ -24,7 +24,7 @@ export class UserRepository {
         Validation.password( password )
 
         const user = User.findOne( { username } )
-        if (user) throw new Error( 'username already exists.' )
+        if (user) throw new Error( 'Username already exists.' )
 
         const id = crypto.randomUUID()
         const hashedPassword = await bcrypt.hashSync(password, SALT_ROUNDS)
