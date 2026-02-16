@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabiomem: Desafío Matemático Espacial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PANTALLA DE INICIO -->
+    <div id="start-screen">
+        <div class="card">
+            <h1>SABIOMEM 🚀</h1>
+            <p>Misión de Aprendizaje Interactivo</p>
+
+            <select id="user-role-select">
+                <option value="" disabled selected>Selecciona tu Rol</option>
+                <option>Estudiante</option>
+                <option>Maestro</option>
+            </select>
+
+            <input type="text" id="username-input" placeholder="Nombre del Piloto" maxlength="12">
+
+            <select id="difficulty-select">
+                <option value="" disabled selected>Nivel de Desafío</option>
+                <option value="1">Fácil</option>
+                <option value="2">Medio</option>
+                <option value="3">Difícil</option>
+            </select>
+
+            <select id="game-time-select">
+                <option value="" disabled selected>Tiempo de Misión</option>
+                <option value="60">1 Minuto</option>
+                <option value="120">2 Minutos</option>
+                <option value="180">3 Minutos</option>
+            </select>
+
+            <button id="start-button">INICIAR MISIÓN</button>
+        </div>
+    </div>
+
+    <!-- PANTALLA DE JUEGO -->
+    <div id="game-wrapper" class="hidden">
+        <div class="hud">
+            <div>Piloto: <span id="display-name"></span></div>
+            <div id="timer-display">Tiempo: 0s</div>
+            <div id="score-display">Puntos: 0</div>
+        </div>
+
+        <div id="game-area">
+            <div id="player"></div>
+            <div id="obstacle"></div>
+        </div>
+
+        <div id="ranking-container">
+            <h3>🏆 TOP 5</h3>
+            <ul id="ranking-list"></ul>
+        </div>
+    </div>
+
+    <!-- MODAL MATEMÁTICO -->
+    <div id="math-modal" class="hidden">
+        <div class="modal-content">
+            <h2>⚠️ SISTEMAS DAÑADOS</h2>
+            <p>Resuelve el cálculo:</p>
+            <h1 id="math-question"></h1>
+            <input type="number" id="math-answer">
+            <button id="submit-answer">REPARAR</button>
+            <p id="math-feedback"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

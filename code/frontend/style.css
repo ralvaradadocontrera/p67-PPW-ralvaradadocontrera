@@ -1,0 +1,104 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: url('sabiomem.jpeg') no-repeat center/cover;
+    color: white;
+    overflow: hidden;
+}
+
+.hidden { display: none !important; }
+
+/* Inicio */
+#start-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+    backdrop-filter: blur(10px);
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    background: #00ffcc;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Juego */
+.hud {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0,0,0,0.85);
+    padding: 10px;
+}
+
+#game-area {
+    width: 800px;
+    height: 300px;
+    margin: 40px auto;
+    position: relative;
+    background: rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+#player {
+    width: 60px;
+    height: 35px;
+    background: silver;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+#obstacle {
+    width: 45px;
+    height: 45px;
+    background: red;
+    position: absolute;
+    bottom: 0;
+    right: -60px;
+}
+
+/* Modal */
+#math-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Ranking */
+#ranking-container {
+    width: 300px;
+    margin: auto;
+    background: rgba(255,255,255,0.15);
+    padding: 10px;
+    border-radius: 10px;
+}
