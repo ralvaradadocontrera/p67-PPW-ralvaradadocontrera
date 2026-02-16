@@ -1,7 +1,0 @@
-p::after {
-    content: " 👉 "; color: gray;
-}
-
-p::before {
-    content: " 🌞 "; color: gray;
-}
